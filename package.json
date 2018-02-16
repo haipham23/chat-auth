@@ -17,7 +17,9 @@
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "build:docker": "docker build -t registry.ongtu.com/chat-auth:latest .",
+    "push:docker": "docker push registry.ongtu.com/chat-auth:latest"
   },
   "keywords": [],
   "author": "",
