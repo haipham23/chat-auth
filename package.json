@@ -5,7 +5,7 @@
   "main": "server.js",
   "dependencies": {
     "bcrypt": "^1.0.3",
-    "chat-ms": "^1.1.0",
+    "chat-ms": "^1.1.1",
     "chat-rp": "^1.0.2",
     "dotenv": "^5.0.0",
     "express": "^4.16.2",
