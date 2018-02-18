@@ -3,6 +3,7 @@ const rp = require('chat-rp');
 const login = require('../apis/login');
 const register = require('../apis/register');
 const verify = require('../apis/verify');
+const isExist = require('../apis/isExist');
 
 const routes = [{
   method: 'get',
@@ -32,6 +33,13 @@ const routes = [{
         username: req.params.username
       })
     )
+}, {
+  method: 'get',
+  path: '/api/auth/is-exist/:username',
+  func: (req, res) =>
+    isExist(req.params)
+      .then((result) => rp.ok(res, result))
+      .catch((error) => rp.error(res, error))
 }]
 
 module.exports = routes;
